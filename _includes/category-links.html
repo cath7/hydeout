@@ -1,3 +1,8 @@
+<div class="dropdown">
+  <!-- <button class="dropdown-button">Kategorien</button> -->
+  <a onclick="showDropdown('category-dropdown')" class="dropdown-button {% if page.layout == 'category' %} active{% endif %}">Kategorien</a>
+  <div id="category-dropdown" class="dropdown-content">
+
 {% comment %}
   Dynamically generate list of links to all category pages
 {% endcomment %}
@@ -10,3 +15,6 @@
     {% endif %}
   {% endif %}
 {% endfor %}
+
+  </div>
+</div>
