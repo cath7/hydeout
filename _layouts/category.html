@@ -2,8 +2,6 @@
 layout: page
 ---
 
-{% include formatted-date.html date=post.date %}
-
 {% unless page.content == '' %}
   {{ content }}
 {% endunless %}
@@ -11,6 +9,7 @@ layout: page
 <ul class="posts-list">
   {% assign category = page.category | default: page.title %}
   {% for post in site.categories[category] %}
+    {% include formatted-date.html date=post.date %}
     <li>
       <h3>
         <a href="{{ post.url | relative_url }}">
