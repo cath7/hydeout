@@ -1,8 +1,10 @@
 .dropdown-button {
+  /*
   color: white;
   border: none;
   padding: 0px;
   font-size: 1rem;
+  */
   cursor: pointer;
 }
 
@@ -34,7 +36,7 @@
   background-color: rgb(229, 229, 229);
 }
 
-.show {
+.dropdown-visible {
   display: block;
 }
 
@@ -44,6 +46,6 @@
 }
 */
 
-.dropdown:hover .dropbtn {
+.dropdown:hover .dropdown-button {
   text-decoration: underline;
 }
