@@ -2,6 +2,8 @@
 layout: page
 ---
 
+{% include formatted-date.html date=include.post.date %}
+
 {% unless page.content == '' %}
   {{ content }}
 {% endunless %}
@@ -13,7 +15,8 @@ layout: page
       <h3>
         <a href="{{ post.url | relative_url }}">
           {{ post.title }}
-          <small>{{ post.date | date_to_string }}</small>
+          <!-- <small>{{ post.date | date_to_string }}</small> -->
+          <small>{{ formattedDate }}</small>
         </a>
       </h3>
     </li>
