@@ -1,5 +1,14 @@
+{% capture i18n_date %}
+{% assign day = page.date | date: "%-d" %}
+{% assign m = page.date | date: "%-m" | minus: 1 %}
+{% assign month = site.months[m] %}
+{% assign year = page.date | date: "%Y" %}
+{% assign formattedDate = day | append: ". " | append: month | append: " " | append: year %}
+{% endcapture %}
+
 <div class="post-meta">
-  <span class="post-date">{{ include.post.date | date_to_string }}</span>
+  <!-- <span class="post-date">{{ include.post.date | date_to_string }}</span> -->
+  <span class="post-date">{{ formattedDate }}</span>
   <span class="post-categories">
     {% for category in include.post.categories %}
       &bull;
