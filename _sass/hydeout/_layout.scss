@@ -270,7 +270,11 @@ body {
 #sidebar .site-title {
   color: $sidebar-title-color;
   a { color: inherit; }
-  a:hover { text-decoration: none; }
+  a:hover,
+  a:focus,
+  a.active { 
+    text-decoration: none;
+  }
 }
 
 #sidebar nav {
