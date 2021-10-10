@@ -2,11 +2,13 @@
   <h2>Weitere Beiträge</h2>
   <ul class="posts-list">
     {% for post in site.related_posts limit:3 %}
+      {% include formatted-date.html date=post.date %}
       <li>
         <h3>
           <a href="{{ post.url | relative_url }}">
             {{ post.title }}
-            <small>{{ post.date | date_to_string }}</small>
+            <!-- <small>{{ post.date | date_to_string }}</small> -->
+            <small>{{ formattedDate }}</small>
           </a>
         </h3>
       </li>
