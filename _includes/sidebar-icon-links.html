@@ -37,14 +37,14 @@
   {% if search_page %}
     <a id="search-link"
        class="icon{% if page.url == '/search' %} active{% endif %}"
-       title="Search" aria-label="Search"
+       title="Suchen" aria-label="Suchen"
        href="{{ search_page.url | relative_url }}">
       {% include svg/search.svg %}
     </a>
   {% endif %}
 
   <a id="subscribe-link"
-     class="icon" title="Subscribe" aria-label="Subscribe"
+     class="icon" title="Abonnieren (Atom Feed XML)" aria-label="Abonnieren (Atom Feed XML)"
      href="{{ site.feed.path | default: 'feed.xml' | relative_url }}">
     {% include svg/feed.svg %}
   </a>
