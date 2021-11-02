@@ -6,7 +6,7 @@
       <li>
         <h3>
           <a href="{{ post.url | relative_url }}">
-            {{ post.title }}
+            {{ post.title | smartify }}
             <!-- <small>{{ post.date | date_to_string }}</small> -->
             <small>{{ formattedDate }}</small>
           </a>
