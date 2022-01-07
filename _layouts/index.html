@@ -17,24 +17,13 @@ layout: default
     {% include post-meta.html post=post %}
 
     {% if post.excerpt %}
+    <p>
       {{ post.excerpt | markdownify | strip_html | truncatewords: 180, ' …' }}
-    {% else %}
-      {{ post.content | truncatewords: 180, ' …' }}
+    </p>
     {% endif %}
 
-    {% if post.excerpt %}
-      {% comment %}Excerpt may be equal to content. Check.{% endcomment %}
-      {% capture content_words %}
-        {{ post.content | number_of_words }}
-      {% endcapture %}
-      {% capture excerpt_words %}
-        {{ post.excerpt | number_of_words }}
-      {% endcapture %}
+    <a href="{{ post.url | relative_url }}">Weiterlesen &hellip;</a>
 
-      {% if content_words != excerpt_words %}
-        <a href="{{ post.url | relative_url }}">Weiterlesen &hellip;</a>
-      {% endif %}
-    {% endif %}
   </article>
   {% endfor %}
 
