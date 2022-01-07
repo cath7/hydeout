@@ -19,7 +19,7 @@ layout: default
     {% if post.excerpt %}
       {{ post.excerpt }}
     {% else %}
-      {{ post.content }}
+      {{ post.content | truncatewords: 180, ' …' }}
     {% endif %}
 
     {% if post.excerpt %}
