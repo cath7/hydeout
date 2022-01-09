@@ -28,10 +28,10 @@ layout: default
       {% if content_words != excerpt_words %}
         {{ post.excerpt }}
       {% else %}
-        {{ post.excerpt | markdownify | strip_html | truncatewords: 100, ' …' }}
+        <p>{{ post.excerpt | markdownify | strip_html | truncatewords: 100, ' …' }}</p>
       {% endif %}
     {% else %}
-      {{ post.content | markdownify | strip_html | truncatewords: 100, ' …' }}
+      <p>{{ post.content | markdownify | strip_html | truncatewords: 100, ' …' }}</p>
     {% endif %}
 
     <a href="{{ post.url | relative_url }}">Weiterlesen &hellip;</a>
